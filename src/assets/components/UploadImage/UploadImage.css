@@ -1,0 +1,14 @@
+.main-form {
+    margin-bottom: 50px;
+}
+
+.faces-found {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: orange;
+    text-shadow: 2px 2px #000;
+}
+.spinner img {
+    height: 32px;
+    width: 32px;
+}
