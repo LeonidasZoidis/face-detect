@@ -34,7 +34,7 @@ export const FaceDetection = () => {
             const url = URL.createObjectURL(file);
             setPreviewUrl(url);
 
-            // Load the image to get its dimensions
+            // assign image dimensions
             const img = new Image();
             img.onload = () => {
                 setImageDimensions({ width: img.width, height: img.height });
@@ -121,21 +121,13 @@ export const FaceDetection = () => {
             <div className="data">
                 <p className="faces-found">{numberOfFaces}</p>
             </div>
-            <div
-                className="canvas-and-imagePreview-container"
-                style={{ position: 'relative' }}
-            >
+            <div className="canvas-and-imagePreview-container">
                 {/* canvas for drawing circles */}
                 <canvas
+                    className="canvas"
                     ref={canvasRef}
                     width={imageDimensions.width}
                     height={imageDimensions.height}
-                    style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        border: '1px solid black',
-                    }}
                 ></canvas>
 
                 {/* display the preview of the uploaded image */}
@@ -143,9 +135,9 @@ export const FaceDetection = () => {
                 {previewUrl && (
                     <div>
                         <img
+                            className="image-preview"
                             src={previewUrl}
                             alt="Uploaded Preview"
-                            style={{ maxWidth: '100%', display: 'block' }}
                         />
                     </div>
                 )}

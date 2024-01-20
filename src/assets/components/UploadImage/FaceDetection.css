@@ -8,7 +8,21 @@
     color: orange;
     text-shadow: 2px 2px #000;
 }
-.spinner img {
+.spinner > img {
     height: 32px;
     width: 32px;
+}
+.canvas-and-imagePreview-container {
+    position: relative;
+}
+.canvas {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+}
+.image-preview {
+    max-width: 100%;
+    display: block;
 }
