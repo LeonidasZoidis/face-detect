@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { uploadFile } from '../../util/uploadFile ';
-import './UploadImage.css';
+import './FaceDetection.css';
+import '../../../../public/spinner-gif.gif';
 
-export const UploadImage = () => {
+export const FaceDetection = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
     const [spinner, setSpinner] = useState(null);
@@ -52,9 +53,7 @@ export const UploadImage = () => {
 
         if (selectedFile) {
             // display the spinner while the fetch is in progress
-            setSpinner(
-                'https://i.gifer.com/origin/34/34338d26023e5515f6cc8969aa027bca.gif'
-            );
+            setSpinner('../../../../public/spinner-gif.gif');
             try {
                 // using the uploadFile function to handle the fetch and upload logic
                 const data = await uploadFile(selectedFile, setPreviewUrl);

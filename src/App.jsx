@@ -1,4 +1,4 @@
-import { UploadImage } from './assets/components/UploadImage/UploadImage';
+import { FaceDetection } from './assets/components/UploadImage/FaceDetection';
 
 function App() {
     return (
@@ -13,7 +13,7 @@ function App() {
                         </p>
                     </i>
                     <br />
-                    <UploadImage></UploadImage>
+                    <FaceDetection></FaceDetection>
                 </div>
             </div>
         </>
