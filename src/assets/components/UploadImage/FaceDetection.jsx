@@ -139,9 +139,9 @@ export const FaceDetection = () => {
                 ></canvas>
 
                 {/* display the preview of the uploaded image */}
+
                 {previewUrl && (
                     <div>
-                        {/* <h2>Preview:</h2> */}
                         <img
                             src={previewUrl}
                             alt="Uploaded Preview"
